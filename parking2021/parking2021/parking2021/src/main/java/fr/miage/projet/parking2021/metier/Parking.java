@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Table(name = "parking")
 public class Parking {
    @Id
-  // @GeneratedValue
+   @GeneratedValue
    @Column(name = "numParking")
     private int numParking;
 
