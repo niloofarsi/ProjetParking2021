@@ -1,11 +1,27 @@
 package fr.miage.projet.parking2021.metier;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "parking")
 public class Parking {
+   @Id
+  // @GeneratedValue
+   @Column(name = "numParking")
     private int numParking;
+
+   @Column(name = "nomParking")
     private String nomParking = "";
-    private  int codePostal;
+
+   @Column(name = "taille")
+    private  int taille;
+
+    @Column(name = "prix")
     private int prix;
+
+    @Column(name = "description")
     private String description ="";
+
+    @Column(name = "numCommune")
     private int numCommune;
 
     public Parking(){
@@ -28,12 +44,12 @@ public class Parking {
         this.nomParking = nomParking;
     }
 
-    public int getCodePostal() {
-        return codePostal;
+    public int getTaille() {
+        return taille;
     }
 
-    public void setCodePostal(int codePostal) {
-        this.codePostal = codePostal;
+    public void setTaille(int codePostal) {
+        this.taille = codePostal;
     }
 
     public int getPrix() {
